@@ -1,0 +1,7 @@
+packages:
+  - "."
+
+# esbuild bundles the fd-0 probe in stdin.integration.test.ts; pnpm blocks its
+# postinstall by default, and without it the native binary never links.
+onlyBuiltDependencies:
+  - esbuild

@@ -1,0 +1,65 @@
+{
+  "name": "@tayomi/utils",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Process-edge Node primitives shared across the TAYOMI plugins and modules: every entry exists to retire a cross-boundary clone, never to collect helpers.",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./process": {
+      "types": "./src/process/index.ts",
+      "default": "./src/process/index.ts"
+    },
+    "./io": {
+      "types": "./src/io/index.ts",
+      "default": "./src/io/index.ts"
+    },
+    "./ansi": {
+      "types": "./src/ansi/index.ts",
+      "default": "./src/ansi/index.ts"
+    }
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./process": {
+        "types": "./dist/process/index.d.ts",
+        "default": "./dist/process/index.js"
+      },
+      "./io": {
+        "types": "./dist/io/index.d.ts",
+        "default": "./dist/io/index.js"
+      },
+      "./ansi": {
+        "types": "./dist/ansi/index.d.ts",
+        "default": "./dist/ansi/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint \"src/**/*.ts\" --max-warnings 0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-security": "^4.0.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1",
+    "vitest": "^4.1.5"
+  }
+}
