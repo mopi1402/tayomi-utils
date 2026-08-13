@@ -36,5 +36,5 @@ A domain is born with its first function, never empty. Current domains:
 | Domain | Contents |
 | --- | --- |
 | `process` | `isDirectExecution` (the entrypoint guard: real paths on both sides) |
-| `io` | `readStdin`, `readStdinSync`, `parseStdin` (the stdin kit: TTY guard, joined-buffer decode, EAGAIN-as-not-yet) |
+| `io` | `readStdin`, `readStdinSync`, `parseStdin` (the stdin kit: TTY guard, joined-buffer decode, EAGAIN-as-not-yet); `stringField` (the payload interrogation every hook edge retypes) |
 | `ansi` | `sgr`, `RESET`, `BOLD`, `DIM` (one-line notice styling; anything richer is @tayomi/cc-views) |
