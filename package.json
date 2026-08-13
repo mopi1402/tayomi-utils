@@ -1,6 +1,6 @@
 {
   "name": "@tayomi/utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Process-edge Node primitives shared across the TAYOMI plugins and modules: every entry exists to retire a cross-boundary clone, never to collect helpers.",
   "sideEffects": false,
